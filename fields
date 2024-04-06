@@ -13,8 +13,8 @@
   },
   "removeTime": {
     "type": "button",
-    "label": "Removed 60s",
-    "value": "Removed 60s",
+    "label": "Remove 60s",
+    "value": "Remove 60s",
     "group": "Buttons"
   },
   "pauseTimer": {
