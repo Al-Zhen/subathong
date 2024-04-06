@@ -82,7 +82,7 @@ window.addEventListener('onEventReceived', function (obj) {
 
         // New removeTime command
         if (text.startsWith(fieldData.removeTimeCommand)) {
-            const seconds = -Math.abs(parseFloat(text.split(' ')[1])); // Convert to negative value to remove time
+            const seconds = -Math.abs(parseFloat(text.split(' ')[1]) * 60); // Convert to negative value to remove time
             if (isNaN(seconds)) return;
             countdown(seconds, true); // 'true' to force the countdown update even if seconds is 0
         }
