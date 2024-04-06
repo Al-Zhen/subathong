@@ -1,1 +1,245 @@
-{"someText":"Default text","someTextField":"Default other text","someColor":"#ff0000","someColorPicker":"#0000FF","someNumber":10,"someSlider":10,"something":"blue","someFinal":"Default other text","minTime":2070,"maxTime":99999999999,"resetTimer":false,"followSeconds":10,"sub1Seconds":240,"sub2Seconds":120,"sub3Seconds":180,"cheerSeconds":60,"cheerMin":100,"tipSeconds":300,"tipMin":1,"hostSeconds":1,"hostMin":100,"raidSeconds":1,"raidMin":100,"textAlign":"left","fontName":"Montserrat","fontSize":24,"fontWeight":"400","fontColor":"rgba(255,255,255,1)","strokeColor":"rgba(255,0,0,0)","strokeSize":2,"addOnZero":"wait","onComplete":"","reset":"Reset timer","preserveTime":"save","addTime":"Add 60s","addTimeCommand":"!addtime","removeTimeCommand":"!removetime","managePermissions":"mods","additionalUsers":"userA,userB","merchSeconds":300,"pauseTimer":"Pause timer","resumeTimer":"Resume timer","pauseCommand":"!pausemarathon","resumeCommand":"!resumemarathon","removeTime":"Removed 60s","subIgnoreGifts":false}
+{
+  "resetTimer": {
+    "type": "button",
+    "label": "Start/Reset timer",
+    "value": "Start/Reset timer",
+    "group": "Buttons"
+  },
+  "addTime": {
+    "type": "button",
+    "label": "Add 60s",
+    "value": "Add 60s",
+    "group": "Buttons"
+  },
+  "removeTime": {
+    "type": "button",
+    "label": "Removed 60s",
+    "value": "Removed 60s",
+    "group": "Buttons"
+  },
+  "pauseTimer": {
+    "type": "button",
+    "label": "Pause timer",
+    "value": "Pause timer",
+    "group": "Buttons"
+  },
+  "resumeTimer": {
+    "type": "button",
+    "label": "Resume timer",
+    "value": "Resume timer",
+    "group": "Buttons"
+  },
+  "minTime": {
+    "type": "number",
+    "label": "Initial marathon duration (minutes)",
+    "value": 60,
+    "step": 0.1,
+    "group": "Timer settings"
+  },
+  "maxTime": {
+    "type": "number",
+    "label": "Maximum marathon duration (minutes):",
+    "value": 1440,
+    "group": "Timer settings"
+  },
+  "preserveTime": {
+    "type": "dropdown",
+    "label": "Overlay reload behaviour",
+    "value": "ignore",
+    "options": {
+      "ignore": "Wait for start to be clicked",
+      "save": "Continue countdown",
+      "restart": "Restart countdown"
+    },
+    "group": "Timer settings"
+  },
+  "addOnZero": {
+    "type": "dropdown",
+    "label": "What should happen on reaching zero?",
+    "value": "wait",
+    "options": {
+      "wait": "Wait for catchup",
+      "add": "New events add time to 0",
+      "stop": "Stop adding time"
+    },
+    "group": "Timer settings"
+  },
+  "onComplete": {
+    "type": "text",
+    "label": "Message on complete",
+    "value": "Done!",
+    "group": "Timer settings"
+  },
+  "pauseCommand": {
+    "type": "text",
+    "label": "Pause command",
+    "value": "!pausemarathon",
+    "group": "Chat command settings"
+  },
+  "resumeCommand": {
+    "type": "text",
+    "label": "Resume command",
+    "value": "!resumemarathon",
+    "group": "Chat command settings"
+  },
+  "addTimeCommand": {
+    "type": "text",
+    "label": "Add time command",
+    "value": "!addtime",
+    "group": "Chat command settings"
+  },
+  "managePermissions": {
+    "type": "dropdown",
+    "label": "Who can manage time:",
+    "value": "mods",
+    "options": {
+      "streamer": "Streamer",
+      "mods": "Mods"
+    },
+    "group": "Chat command settings"
+  },
+  "additionalUsers": {
+    "type": "text",
+    "label": "Additional users, comma separated",
+    "value": "userA,userB",
+    "group": "Chat command settings"
+  },
+  "followSeconds": {
+    "type": "number",
+    "label": "Seconds per follower:",
+    "value": 1,
+    "step": 1,
+    "group": "Follower time settings"
+  },
+  "sub1Seconds": {
+    "type": "number",
+    "label": "Seconds per T1/Prime subscriber:",
+    "value": 60,
+    "step": 1,
+    "group": "Sub time settings"
+  },
+  "sub2Seconds": {
+    "type": "number",
+    "label": "Seconds per T2 subscriber:",
+    "value": 120,
+    "step": 1,
+    "group": "Sub time settings"
+  },
+  "sub3Seconds": {
+    "type": "number",
+    "label": "Seconds per T3 subscriber:",
+    "value": 180,
+    "step": 1,
+    "group": "Sub time settings"
+  },
+  "subIgnoreGifts": {
+    "type": "checkbox",
+    "label": "Ignore gifted subs",
+    "value": false,
+    "group": "Sub time settings"
+  },
+  "cheerSeconds": {
+    "type": "number",
+    "label": "Seconds per 100 Bits:",
+    "value": 60,
+    "step": 0.1,
+    "group": "Cheer time settings"
+  },
+  "cheerMin": {
+    "type": "number",
+    "label": "Minimum bits to trigger:",
+    "value": 100,
+    "step": 1,
+    "group": "Cheer time settings"
+  },
+  "tipSeconds": {
+    "type": "number",
+    "label": "Seconds multiplied by tip amount:",
+    "value": 300,
+    "step": 0.01,
+    "group": "Tip time settings"
+  },
+  "tipMin": {
+    "type": "number",
+    "label": "Minimum tip to trigger:",
+    "value": 1,
+    "step": 0.01,
+    "group": "Tip time settings"
+  },
+  "merchSeconds": {
+    "type": "number",
+    "label": "Seconds multiplied by merch order amount:",
+    "value": 300,
+    "step": 0.01,
+    "group": "Merch time settings"
+  },
+  "raidSeconds": {
+    "type": "number",
+    "label": "Seconds per viewer from raid:",
+    "value": 0,
+    "step": 0.01,
+    "group": "Raid time settings"
+  },
+  "raidMin": {
+    "type": "number",
+    "label": "Minimum viewers in raid:",
+    "value": 100,
+    "step": 1,
+    "group": "Raid time settings"
+  },
+  "textAlign": {
+    "label": "Text align",
+    "type": "dropdown",
+    "value": "left",
+    "options": {
+      "left": "Left",
+      "center": "Center",
+      "right": "Right"
+    },
+    "group": "Typography"
+  },
+  "fontName": {
+    "type": "text",
+    "label": "Font name",
+    "value": "Montserrat",
+    "group": "Typography"
+  },
+  "fontSize": {
+    "type": "number",
+    "label": "Font size",
+    "value": 24,
+    "group": "Typography"
+  },
+  "fontWeight": {
+    "label": "Font Weight",
+    "type": "dropdown",
+    "value": "400",
+    "options": {
+      "100": "Thin (100)",
+      "300": "Light (300)",
+      "400": "Regular (400)",
+      "500": "Medium (500)",
+      "700": "Bold (700)",
+      "900": "Black (900)"
+    },
+    "group": "Typography"
+  },
+  "fontColor": {
+    "type": "colorpicker",
+    "label": "Font Color",
+    "value": "rgba(255,255,255,1)",
+    "group": "Typography"
+  },
+  "strokeColor": {
+    "type": "colorpicker",
+    "label": "Stroke Color",
+    "value": "rgba(255,0,0,0)",
+    "group": "Typography"
+  },
+  "strokeSize": {
+    "type": "number",
+    "label": "Stroke size",
+    "value": 2,
+    "group": "Typography"
+  }
+}
